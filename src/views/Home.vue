@@ -68,7 +68,9 @@ export default {
     },
   },
   async created() {
+    console.log("Attempting to get data from API...")
     const data = await this.fetchCovidData();
+    console.log("Successfully got data from API.")
 
     //populate data structure from API call
     this.dataDate = data.Date;
